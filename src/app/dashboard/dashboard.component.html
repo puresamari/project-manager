@@ -1,6 +1,7 @@
 <p>
   dashboard works!
 </p>
+<md-spinner *ngIf="!loaded"></md-spinner>
 <h1 *ngFor="let repo of repos">
   {{repo.directory}}
 </h1>
