@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Repo, { GetReposInDir } from './repo';
-import { PUSH_NAME, SET_DIRECTORIES } from '../src/actions/data';
+import { PUSH_NAME, SET_DIRECTORIES } from './actions/data';
 
 const HOME = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
 const DIRES = `${HOME}/projects`;
