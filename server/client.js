@@ -3,7 +3,8 @@ import path from 'path';
 import Repo, { GetReposInDir } from './repo';
 import { PUSH_NAME, SET_DIRECTORIES } from '../src/actions/data';
 
-const DIRES = '~/Documents';
+const HOME = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
+const DIRES = `${HOME}/projects`;
 
 class Client {
 

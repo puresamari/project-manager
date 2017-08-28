@@ -5,6 +5,7 @@ import _ from 'lodash';
 class Repo {
   directory = '';
   index = '';
+  isNpm = false;
   constructor(_dir, _index) {
     this.directory = _dir;
     this.index = _index;
@@ -13,8 +14,9 @@ class Repo {
 
   refreshInformation() {
     const packagePath = path.resolve(this.directory, 'package.json');
-    fs.readfileSync(packagePath,);
-
+    this.isNpm = fs.existsSync(packagePath);
+    if(!this.isNpm) { return; }
+    const file = fs.readFileSync(packagePath);
   }
 
   name = '';
@@ -27,7 +29,8 @@ class Repo {
   get Data() {
     return {
       index: this.index,
-      directory: this.directory
+      directory: this.directory,
+      isNpm: this.isNpm
     };
   }
   toString() {
