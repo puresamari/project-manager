@@ -8,14 +8,14 @@ import { DataService }       from '../data.service';
   providers: [DataService]
 })
 export class DashboardComponent implements OnInit {
-
   connection;
+  repos: any[] = [];
 
   constructor(private dataService:DataService) {}
 
   ngOnInit() {
-    this.connection = this.dataService.getProjectsObserver().subscribe(message => {
-      console.log('data', message);
+    this.connection = this.dataService.getProjectsObserver().subscribe((repos: any[]) => {
+      this.repos = repos;
     })
   }
 
