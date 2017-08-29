@@ -42,11 +42,12 @@ class Client {
   tick = 0;
 
   refresh() {
-    this.repos = GetReposInDir(DIRES);
     this.pushData('repos', this.repos.map(v => v.Data));
   }
 
   init() {
+    this.repos = GetReposInDir(DIRES);
+    this.repos.forEach(v => v.subscribe(this.refresh.bind(this)));
     this.refresh();
     clearInterval(this.interval);
   }

@@ -4,11 +4,13 @@ import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OverviewCardComponent } from './overview-card/overview-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    OverviewCardComponent
   ],
   imports: [
     MaterialModule,

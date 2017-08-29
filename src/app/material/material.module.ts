@@ -8,14 +8,20 @@ import {
   MdCheckboxModule,
   MdListModule,
   MdIconModule,
-  MdProgressSpinnerModule
+  MdCardModule,
+  MdGridListModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
 } from '@angular/material';
 const modules = [
   MdButtonModule,
   MdCheckboxModule,
   MdListModule,
   MdIconModule,
-  MdProgressSpinnerModule
+  MdCardModule,
+  MdGridListModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
 ];
 
 @NgModule({
