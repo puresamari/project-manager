@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { filter } from 'lodash';
+
 import { DataService } from '../data.service';
 
 @Component({
@@ -9,14 +11,22 @@ import { DataService } from '../data.service';
 })
 export class DashboardComponent implements OnInit {
   connection;
-  repos: any[] = [];
+  projects: any[] = [];
   loaded: boolean = false;
 
   constructor(private dataService: DataService) { }
 
+  get OtherProjects(): any[] {
+    return filter(this.projects, { isNpm: false });
+  }
+  get NpmProjects(): any[] {
+    return filter(this.projects, { isNpm: true });
+  }
+
   ngOnInit() {
     this.connection = this.dataService.getProjectsObserver().subscribe((repos: any[]) => {
-      this.repos = repos;
+      this.projects = repos;
+      console.log(this.NpmProjects);
       this.loaded = true;
     })
   }

@@ -2,14 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// import * as modules from '@angular/material';
 import {
   MdButtonModule,
   MdCheckboxModule,
+  MdListModule,
+  MdIconModule,
   MdProgressSpinnerModule
 } from '@angular/material';
 const modules = [
   MdButtonModule,
   MdCheckboxModule,
+  MdListModule,
+  MdIconModule,
   MdProgressSpinnerModule
 ];
 

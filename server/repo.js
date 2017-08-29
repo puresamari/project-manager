@@ -6,6 +6,7 @@ class Repo {
   directory = '';
   index = '';
   isNpm = false;
+  detail = {};
   constructor(_dir, _index) {
     this.directory = _dir;
     this.index = _index;
@@ -16,7 +17,7 @@ class Repo {
     const packagePath = path.resolve(this.directory, 'package.json');
     this.isNpm = fs.existsSync(packagePath);
     if(!this.isNpm) { return; }
-    const file = fs.readFileSync(packagePath);
+    this.detail = JSON.parse(fs.readFileSync(packagePath, "utf8"));
   }
 
   name = '';
@@ -30,7 +31,8 @@ class Repo {
     return {
       index: this.index,
       directory: this.directory,
-      isNpm: this.isNpm
+      isNpm: this.isNpm,
+      detail: this.detail
     };
   }
   toString() {

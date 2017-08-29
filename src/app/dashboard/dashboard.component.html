@@ -2,6 +2,17 @@
   dashboard works!
 </p>
 <md-spinner *ngIf="!loaded"></md-spinner>
-<h1 *ngFor="let repo of repos">
-  {{repo.directory}}
-</h1>
+<md-list [disableRipple]="false">
+  <h3 md-subheader>Npm Projects</h3>
+  <md-list-item *ngFor="let project of NpmProjects">
+    <md-icon md-list-icon>keyboard_arrow_right</md-icon>
+    <h4 md-line>{{project.detail.name}} | {{project.detail.version}}</h4>
+    <p md-line>{{project.directory}}</p>
+  </md-list-item>
+  <md-divider></md-divider>
+  <h3 md-subheader>Other Projects</h3>
+  <md-list-item *ngFor="let project of OtherProjects">
+      <md-icon md-list-icon>keyboard_arrow_right</md-icon>
+    <h4 md-line>{{project.directory}}</h4>
+  </md-list-item>
+</md-list>
