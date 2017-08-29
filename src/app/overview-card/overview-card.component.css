@@ -1,3 +1,16 @@
 .card {
   margin-bottom: 10px;
 }
+
+.categories {
+  height: 5px;
+  width: 100%;
+  display: flex;
+}
+
+.category {
+  background-color: red;
+}
+.category--javascript {
+  background-color: yellow;
+}

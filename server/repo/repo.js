@@ -43,7 +43,7 @@ class Repo {
     if (this.fileTypesAmounts[type]) {
       this.fileTypesAmounts[type] += 1;
     } else {
-      this.fileTypesAmounts[type] = 0;
+      this.fileTypesAmounts[type] = 1;
     }
   }
 
@@ -56,9 +56,9 @@ class Repo {
         const files = [...TestFiles];
         this.fileAmount = files.length;
         files.forEach(fileName => this.fillFileByName(fileName));
-        this.loading = false;
+        this.loadingFiles = false;
         this.observer.next();
-      }, 6000);
+      }, 2000);
     });
   }
 
