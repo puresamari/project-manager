@@ -1,6 +1,6 @@
 import fs from 'fs';
-import path from 'path';
 import _ from 'lodash';
+import path from 'path';
 
 import Repo from './repo';
 

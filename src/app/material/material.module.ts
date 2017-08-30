@@ -11,6 +11,7 @@ import {
   MdCardModule,
   MdGridListModule,
   MdProgressBarModule,
+  MdTooltipModule,
   MdProgressSpinnerModule,
 } from '@angular/material';
 const modules = [
@@ -21,6 +22,7 @@ const modules = [
   MdCardModule,
   MdGridListModule,
   MdProgressBarModule,
+  MdTooltipModule,
   MdProgressSpinnerModule,
 ];
 

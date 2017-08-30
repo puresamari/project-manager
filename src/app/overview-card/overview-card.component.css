@@ -9,8 +9,9 @@
 }
 
 .category {
-  background-color: red;
+  border-width: 1px;
+  border-color: #999;
 }
-.category--javascript {
-  background-color: yellow;
+.category:first-child {
+  border-left-style: none ! important;
 }

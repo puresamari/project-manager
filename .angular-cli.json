@@ -21,6 +21,7 @@
       "styles": [
         "styles.css"
       ],
+      "extensions": [".ts", ".js", ".json"],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -24,7 +24,7 @@ class Client {
   }
 
   log(...params) {
-    console.log(`CLIENT "${this.Id}"`, ...params);
+    // console.log(`CLIENT "${this.Id}"`, ...params);
   }
 
   push(name, value) {

@@ -4,9 +4,11 @@
     </md-progress-bar>
     <div *ngIf="!project.loadingFiles" class="categories">
       <span
-        *ngFor="let Category of Categories"
-        [ngStyle]="{'width': Category.styleWidth}"
-        [ngClass]="['category', 'category--' + Category.name]">
+        *ngFor="let category of categories"
+        [mdTooltip]="category.Description"
+        mdTooltipPosition="above"
+        [ngStyle]="category.Style"
+        class="category">
       </span>
     </div>
   </div>

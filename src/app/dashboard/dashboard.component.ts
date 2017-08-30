@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.connection = this.dataService.getProjectsObserver().subscribe((repos: any[]) => {
       this.projects = repos;
-      console.log(this.NpmProjects);
       this.loaded = true;
     })
   }
